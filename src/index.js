@@ -1,6 +1,8 @@
-import { fetchBreeds, fetchCatByBreed } from './cat-api';
+import { fetchBreeds, fetchCatByBreed } from './api-cat';
+import './style.css';
 import { Notify } from 'notiflix/build/notiflix-notify-aio';
 import SlimSelect from 'slim-select';
+import 'slim-select/dist/slimselect.css';
 
 const ref = {
   selector: document.querySelector('.breed-select'),
@@ -55,7 +57,7 @@ function onFetchError(error) {
     'Oops! Something went wrong! Try reloading the page or select another cat breed!',
     {
       position: 'center-center',
-      timeout: 5000,
+      timeout: 3000,
       width: '400px',
       fontSize: '24px',
     }
